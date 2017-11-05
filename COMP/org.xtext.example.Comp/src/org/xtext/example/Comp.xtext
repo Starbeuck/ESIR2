@@ -1,0 +1,9 @@
+grammar org.xtext.example.Comp with org.eclipse.xtext.common.Terminals
+
+generate comp "http://www.xtext.org/example/Comp"
+
+Model:
+	greetings+=Greeting*;
+	
+Greeting:
+	'Hello' name=ID '!';

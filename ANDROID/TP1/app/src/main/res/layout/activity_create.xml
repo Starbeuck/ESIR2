@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="esir.tp1.CreateActivity">
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/titleText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/authorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/authorText"
+        app:layout_constraintRight_toLeftOf="@id/titleEdit"
+        app:layout_constraintTop_toBottomOf="@id/titleEdit" />
+
+    <TextView
+        android:id="@+id/dateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="@string/authorText"
+        app:layout_constraintRight_toLeftOf="@id/authorEdit"
+        app:layout_constraintTop_toBottomOf="@id/authorEdit" />
+
+    <EditText
+        android:id="@+id/titleEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/titleEdit"
+        app:layout_constraintLeft_toRightOf="@id/titleText"
+        app:layout_constraintTop_toBottomOf="@id/titleText" />
+
+    <EditText
+        android:id="@+id/authorEdit"
+        android:layout_width="184dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/authorEdit"
+        app:layout_constraintLeft_toRightOf="@id/authorText"
+        app:layout_constraintTop_toBottomOf="@id/authorText" />
+
+    <EditText
+        android:id="@+id/DateEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/dateEdit"
+        app:layout_constraintLeft_toRightOf="@id/dateText"
+        app:layout_constraintTop_toBottomOf="@id/dateText"/>
+
+    <Button
+        android:id="@+id/CreateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="52dp"
+        android:layout_marginTop="116dp"
+        android:text="@string/Button"
+        app:layout_constraintLeft_toLeftOf="@id/DateEdit"
+        app:layout_constraintTop_toBottomOf="@id/DateEdit"/>
+
+</android.support.constraint.ConstraintLayout>

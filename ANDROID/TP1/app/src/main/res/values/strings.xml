@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TP1</string>
+    <string name="titleText"> Titre du livre </string>
+    <string name="authorText"> Auteur du livre </string>
+    <string name="dateText"> Parution du livre </string>
+    <string name="titleEdit"> Titre </string>
+    <string name="authorEdit"> Author </string>
+    <string name="dateEdit"> Date </string>
+    <string name="Button"> Créer </string>
+    <string name="AddLivre"> Ajouter des Livres</string>
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<CatalogData>
+    <book>
+        <author>David Bromberg</author>
+        <title>Programmation Android</title>
+        <genre>Programmation</genre>
+        <price>0</price>
+        <publish_date>2012-01-30</publish_date>
+        <description>Apprendre la programmation sur Android</description>
+    </book>
+    <book>
+        <author>David Bromberg</author>
+        <title>Programmation Iphone</title>
+        <genre>Programmation</genre>
+        <price>0</price>
+        <publish_date>2012-01-30</publish_date>
+        <description>Apprendre la programmation sur Iphone</description>
+    </book>
+</CatalogData>

@@ -1,0 +1,85 @@
+<main role="main" class="container">
+
+	<div class="jumbotron">
+		<h1>Pokesir</h1>
+	</div>
+
+	<h2>
+		Search a pokemon !
+	</h2>
+
+	<hr/>
+
+	<div style="text-align: center">
+		<input [(ngModel)]="Search" placeholder="I am looking for...">
+
+		<select [(ngModel)]="choose">
+			<option value="" disabled selected>Pick a Pokemon</option>
+			<option *ngFor="let pok of api_list_pokemon | pokemonName:'name':Search" >{{pok.name}}</option>
+		</select>
+
+	</div>
+
+	<hr/>
+
+	<div style="text-align: center">
+		<button (click)="letsgo()">Go !</button>
+	</div>
+
+	<div *ngIf="visible">
+		<div class="container">
+			  <div class="row">
+
+				<div class="col">
+				  <div class="row">
+					<div class="col mini-box">
+						<figure>
+							<img [src]="pokemonChoosen.getimageFrontNorm()" />
+							<figcaption>Front Normal</figcaption>
+						</figure>
+					</div>
+					<div class="col mini-box">
+						<figure>
+							<img [src]="pokemonChoosen.getimageBackNorm()"/>
+							<figcaption>Back Normal</figcaption>
+						</figure>
+					 </div>
+				  </div>
+				  <div class="row">
+					<div class="col mini-box">
+						<figure>
+							<img [src]="pokemonChoosen.getimageFrontShiny()" />
+							<figcaption>Front Shiny</figcaption>
+						</figure>
+						</div>
+					<div class="col mini-box">
+						<figure>
+							<img [src]="pokemonChoosen.getimageBackShiny()" />
+							<figcaption>Schiny Back</figcaption>
+						</figure>
+					  </div>
+				  </div>
+				</div>
+
+
+				<div class="col big-box">
+					<h2>{{pokemonChoosen.getname()}}</h2>
+					<hr/>
+					<p> Type : {{pokemonChoosen.getType()}}</p>
+					<p> Height : {{pokemonChoosen.getHeight()}}</p>
+					<p>Abilities : 
+						<li *ngFor="let ab of pokemonChoosen.getAbilitiesTab()">
+							<ul>{{ab}}</ul>
+						</li>
+					</p>
+					<p>Statistiques : 
+						<li *ngFor="let st of pokemonChoosen.getstatsAll()">
+							<ul>{{st.getStat()}} : {{st.getval()}}</ul>
+						</li>
+					</p>
+				</div>
+			</div>
+
+  		</div>
+</div>
+</main>

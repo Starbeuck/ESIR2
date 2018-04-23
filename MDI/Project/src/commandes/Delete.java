@@ -3,10 +3,15 @@ package commandes;
 
 import mainpck.Buffer;
 
+/**
+ * @author Sophy and Solenn
+ *
+ */
 public class Delete implements Command {
 
 	private Buffer buffer;
 	
+	//constructor 
 	public Delete(Buffer b) {
 		this.buffer = b;
 	}
@@ -14,7 +19,6 @@ public class Delete implements Command {
 	@Override
 	public void execute() {
 		this.buffer.delete();
-
 	}
 
 }

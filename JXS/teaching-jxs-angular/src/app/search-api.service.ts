@@ -5,21 +5,18 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class SearchApiService {
 
-  ADRESS: string = "./assets/list_pokemon.json";
+	ADRESS: string = "./assets/list_pokemon.json";
 
-	 constructor(private http: HttpClient) {
-    }
+	constructor(private http: HttpClient) {
+	}
 
-    public getJSON(url :string): Observable<any> {
-        return this.http.get(url)
-    }
-	
+	public getJSON(url :string): Observable<any> {
+		return this.http.get(url)
+	}
+
 	public getInfo(url: string){
 		return this.http.get(url);
 	}
-	
-	
-}
 
-//./assets/list_pokemon.json
-//http://pokeapi.co/api/v2/pokemon
+
+}

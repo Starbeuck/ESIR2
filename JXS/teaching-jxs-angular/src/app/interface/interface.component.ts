@@ -28,7 +28,7 @@ export class InterfaceComponent implements OnInit {
 	
  constructor(api: SearchApiService) {
 	 this.apiService = api;
-	 this.api_list_pokemon = [];
+	 this.api_list_pokemon = []; 
 	 this.pokemonChoosen = new PokemonInfo("","",0,[],[], []);
  }
 	
@@ -36,6 +36,7 @@ export class InterfaceComponent implements OnInit {
  ngOnInit() {
 	  this.apiService.getJSON(this.apiService.ADRESS).subscribe(data => {
 		  	this.bcp_pokemon = data.results; 
+		  console.log(data)
 		    for (let value in this.bcp_pokemon){
 					let temp = new Pokemon(this.bcp_pokemon[value].name, this.bcp_pokemon[value].url)
 				    this.api_list_pokemon.push(temp);

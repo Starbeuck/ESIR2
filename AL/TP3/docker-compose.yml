@@ -1,0 +1,30 @@
+version: '2'
+
+services:
+      build: './tomcat'
+      hostname: tomcat
+      ports:
+         - "90:8080"
+      networks:
+         - mynetwork
+
+   middletiers:
+      build: './middletiers'
+      hostname: middletiers
+      depends_on:
+         - tomcat
+      networks:
+         - mynetwork
+
+   edge:
+      build: './edge'
+      hostname: edge
+      depends_on:
+         - middletiers
+      ports:
+         - "80:9090"
+      networks:
+         - mynetwork
+
+networks:
+   mynetwork:

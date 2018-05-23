@@ -3,26 +3,21 @@ package commandes;
 import mainpck.Buffer;
 import mainpck.IHM;
 
-/**
- * @author Sophy and Solenn 
- *
- */
 public class Selections implements Command {
-	//parameters
+	
+	private IHM ihm; 
 	private Buffer buffer;
-	private int debut;
-	private int fin;
 
-	//constructor
-	public Selections (Buffer b, int deb, int end){
+	public Selections (Buffer b, IHM ih){
+		this.ihm=ih;
 		this.buffer = b;
-		this.debut=deb; 
-		this.fin=end;
 	}
 	
 	@Override
 	public void execute() {
-		this.buffer.selections(debut, fin);
-		
+		this.buffer.selections(ihm.getStartSel(), ihm.getEndSel());
+		this.ihm.debSel = this.ihm.getStartSel();
+		this.ihm.endSel = this.ihm.getEndSel();
+
 	}
 }

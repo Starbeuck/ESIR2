@@ -1,15 +1,8 @@
 package mainpck;
-/**
- * @author Sophy
- *
- */
 public class PressePapierImpl implements PressePapier {
 	
 	String texteIntermediaire;
 	
-	/**
-	 * Constructor
-	 */
 	public void PressePapier (){
 		texteIntermediaire="";
 	}

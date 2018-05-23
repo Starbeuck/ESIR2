@@ -2,34 +2,19 @@ package commandes;
 import mainpck.Buffer;
 import mainpck.IHM;
 
-/**
- * @author Sophy & Solenn
- *
- */
 public class Insert implements Command {
 
-	//parameters
 	private Buffer buffer;
-	private String carAjout;
+	private IHM ihm;
 	
-	
-	/**
-	 * Constructor
-	 * @param b :the buffer
-	 * @param ihm : the ihm
-	 * @param car : the character to add
-	 */
-	public Insert(Buffer b,  String car) {
+	public Insert(Buffer b, IHM ihm) {
 		this.buffer = b;
-		this.carAjout=car;
+		this.ihm = ihm;
 	}
 	
-	/* (non-Javadoc)
-	 * @see commandes.Command#execute()
-	 */
 	@Override
 	public void execute() {
-		this.buffer.inserer(this.carAjout);
+		this.buffer.inserer(this.ihm.getTempochar());
 	}
 
 }

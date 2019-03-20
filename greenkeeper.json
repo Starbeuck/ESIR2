@@ -1,0 +1,10 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "JXS/TP2/package.json",
+        "JXS/teaching-jxs-angular/package.json"
+      ]
+    }
+  }
+}
